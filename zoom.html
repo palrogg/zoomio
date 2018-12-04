@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800" rel="stylesheet">
+
+  <style>
+  /* d3js */
+
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    max-width: 700px;
+    margin: auto;
+  }
+  body, text{
+    font-family: 'Montserrat', sans-serif;
+  }
+  h2{
+    margin: .5em 0 .2em 0;
+  }
+  p.credit{
+    font-size: .8em;
+    margin: 0;
+  }
+  .main-container{
+    /* pour rendre visibles les signatures */
+    padding-bottom: 2em;
+  }
+  .zoom{
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  #zoomiocontainer{
+    cursor: crosshair;
+    border: 1pt solid #ccc;
+  }
+
+</style>
+
+<link rel="stylesheet" href="lib/zoomio.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="lib/zoomio.js?02"></script>
+</head>
+
+<body>
+
+  <h2>Les 30 plus gros importateurs de biens militaires «Swiss made»</h2>
+  <div class="main-container">
+    <img class="zoom" src="images-zoom/LTXXX_TF_big.jpg">
+    <p class="credit"><b>Note:</b> une précédente version de cette carte contenait par erreur des permis d’exportation de biens militaires spécifiques à destination de l’Iran et de la Russie. Concernant l’Iran, il s’agissait en fait de permis liés aux sanctions en vigueur contre ce pays. Quant à la Russie, il s’agissait de permis pour des biens nucléaires qui entrent dans la catégorie des biens à double usage, ce qui ne modifie pas le total pour ce pays.</p>
+    <p class="credit">Source: compilation de données du Secrétariat d’Etat à l'économie sur les exportations de <a target="_blank" href="https://www.seco.admin.ch/seco/fr/home/seco/nsb-news/medienmitteilungen-2018.msg-id-69916.html">matériel de guerre</a> et de <a href="https://www.seco.admin.ch/seco/fr/home/Aussenwirtschaftspolitik_Wirtschaftliche_Zusammenarbeit/Wirtschaftsbeziehungen/exportkontrollen-und-sanktionen/industrieprodukte--dual-use--und-besondere-militaerische-gueter/statistik/2015.html" target="_blank">permis établis pour les biens à double usage et biens spécifiques militaires</a></p>
+    <p class="credit">Infographie: Florent Collioud</p>
+    <p class="credit">Données: Paul Ronga</p>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pym/1.3.2/pym.v1.js"></script>
+  <script>
+
+  jQuery(function($){ // on DOM load
+    $('.zoom').zoomio({
+      fadeduration: 500
+    });
+  })
+
+  var pymChild = new pym.Child();
+
+
+</script>
+</body>
+</html>
